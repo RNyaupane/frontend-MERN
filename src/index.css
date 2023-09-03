@@ -261,7 +261,11 @@ a {
     padding: 15px;
     background-color: var(--color-white);
     border-radius: 10px;
+    overflow: hidden;
 
+}
+.product-card:hover .action-bar{
+    right: 20px;
 }
 .product-card .product-details h6{
     color: var(--color-bf4800);
@@ -274,6 +278,15 @@ a {
 .product-card .product-details .price{
     color: var(--color-1c1c1b);
     font-size: 16px;
+}
+.action-bar{
+    top: 10%;
+    right: -23px;
+    transition: 0.3s;
+}
+.wishlist-icon{
+    top: 2%;
+    right: 20px;
 }
 
 /* Product Card Ends her */
