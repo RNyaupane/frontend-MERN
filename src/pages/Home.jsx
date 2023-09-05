@@ -3,6 +3,7 @@ import Marquee from "react-fast-marquee";
 import { Link } from 'react-router-dom'
 import BlogCard from '../components/BlogCard';
 import ProductCard from '../components/ProductCard';
+import SpecialProduct from '../components/SpecialProduct';
 
 const Home = () => {
   return (
@@ -26,7 +27,7 @@ const Home = () => {
                 <div className="small-banner position-relative ">
                   <img src="images/catbanner-01.jpg" className='img-fluid rounded-3' alt="main banner" />
                   <div className="small-banner-content position-absolute">
-                    <h4>SUPERCHARGED FOR PROS</h4>
+                    <h4>Best Offer</h4>
                     <h5>iPad S13+ Pro.</h5>
                     <p>From $999.00 <br /> or $41.62/mo.</p>
                   </div>
@@ -174,15 +175,30 @@ const Home = () => {
       <section className="featured-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">
-              Featured Collection
-            </h3>
+            <div className="col-12">
+              <h3 className="section-heading">
+                Featured Collection
+              </h3>
+            </div>
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
           </div>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
-            <ProductCard/>
+        </div>
+      </section>
+      <section className="special-wrapper py-5 home-wrapper-2">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <h3 className="section-heading">
+                Special Products
+              </h3>
+            </div>
+          </div>
+          <div className="row">
+            <SpecialProduct/>
+            <SpecialProduct/>
+            <SpecialProduct/>
           </div>
         </div>
       </section>
@@ -225,15 +241,15 @@ const Home = () => {
       <section className="blog-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
-          <div className="col-12">
-            <h3 className="section-heading">
-              Our Latest Blogs
-            </h3>
-          </div>
-            <BlogCard/>
-            <BlogCard/>
-            <BlogCard/>
-            <BlogCard/>
+            <div className="col-12">
+              <h3 className="section-heading">
+                Our Latest Blogs
+              </h3>
+            </div>
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
+            <BlogCard />
           </div>
         </div>
       </section>

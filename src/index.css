@@ -297,7 +297,15 @@ a {
 
 /* Product Card Ends her */
 
+.special-product-card{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+}
 
+/* Special Product */
+
+/* Special Product Ends here */
 
 
 
