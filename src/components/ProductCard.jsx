@@ -7,7 +7,7 @@ const ProductCard = () => {
     return (
         <>
             <div className="col-3">
-                <Link className="product-card position-relative">
+                <div className="product-card position-relative">
                     <div className="wishlist-icon position-absolute">
                         <Link>
                             <img src="images/wish.svg" alt="wishlist" />
@@ -26,7 +26,7 @@ const ProductCard = () => {
                         <ReactStars
                             count={5}
                             size={24}
-                            value="3"
+                            value={3}
                             edit={false}
                             activeColor="#ffd700"
                         />
@@ -45,7 +45,7 @@ const ProductCard = () => {
                             </Link>
                         </div>
                     </div>
-                </Link>
+                </div>
             </div>
         </>
     )

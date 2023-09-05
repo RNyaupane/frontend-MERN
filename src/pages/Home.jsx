@@ -9,9 +9,9 @@ const Home = () => {
   return (
     <>
       <section className="home-wrapper-1 py-5">
-        <div className="container-xxl">
+        <div className="container-xl mw-100"> 
           <div className="row">
-            <div className="col-6">
+            <div className="col-md-6 mb-4 mx-6"> 
               <div className="main-banner position-relative ">
                 <img src="images/main-banner-1.jpg" className='img-fluid rounded-3' alt="main banner" />
                 <div className="main-banner-content position-absolute">
@@ -22,7 +22,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-md-6"> 
               <div className="d-flex flex-wrap gap-10 justify-content-between align-items-center">
                 <div className="small-banner position-relative ">
                   <img src="images/catbanner-01.jpg" className='img-fluid rounded-3' alt="main banner" />
@@ -61,6 +61,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <section className="home-wrapper-2 py-5">
         <div className="container-xxl">
           <div className="row">
@@ -195,10 +196,10 @@ const Home = () => {
               </h3>
             </div>
           </div>
-          <div className="row">
-            <SpecialProduct/>
-            <SpecialProduct/>
-            <SpecialProduct/>
+          <div className="row ">
+            <SpecialProduct />
+            <SpecialProduct />
+            <SpecialProduct />
           </div>
         </div>
       </section>

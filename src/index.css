@@ -31,6 +31,7 @@
 
 body {
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
 }
 
 a {
@@ -298,7 +299,7 @@ a {
 /* Product Card Ends her */
 
 .special-product-card{
-    padding: 10px;
+    padding: 20px 10px;
     border-radius: 10px;
     background-color: var(--color-white);
 }

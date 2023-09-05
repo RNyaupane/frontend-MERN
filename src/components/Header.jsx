@@ -21,22 +21,22 @@ const Header = () => {
         </div>
       </header>
       <header className="header-upper py-3">
-        <div className="container-xxl">
-          <div className="row align-items-center">
-            <div className="col-2">
+        <div className="container-xxl mw-100 px-2 px-md-5">
+          <div className="row d-flex align-items-center">
+            <div className="col-3 d-block">
               <h2>
-                <Link className='text-white'>Developers</Link>
+                <Link className='text-white'>DEV</Link>
               </h2>
             </div>
-            <div className="col-5">
-              <div className="input-group">
-                <input type="text" className="form-control py-2" placeholder="Search product here..." aria-label="Search product here..." aria-describedby="basic-addon2" />
-                <span className="input-group-text p-3" id="basic-addon2">
+            <div className="col-4">
+              <div className="input-group justify-content-end">
+                <input type="text" className="form-control py-2 d-none d-sm-block" placeholder="Search product here..." aria-label="Search product here..." aria-describedby="basic-addon2" />
+                <span className="input-group-text p-3" id="basic-addon2 cursor-pointer">
                   <BsSearch className='fs-6' />
                 </span>
               </div>
             </div>
-            <div className="col-5">
+            <div className="col-5 ">
               <div className="header-upper-links d-flex align-items-center justify-content-between">
                 <div className="">
                   <Link className='d-flex align-items-center gap-10 text-white'>
@@ -79,12 +79,12 @@ const Header = () => {
                   <div className="dropdown">
                     <button className="btn btn-secondary dropdown-toggle bg-transparent border-0  gap-15 d-flex align-items-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                       <img src='/images/menu.svg' alt='menu'/>
-                      <span className='me-5 d-inline-block'>Shop Categories</span>
+                      <span className='me-0 me-md-5 d-inline-block'>Shop Categories</span>
                     </button>
                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><Link className="dropdown-item text-white" to="">Action</Link></li>
-                      <li><Link className="dropdown-item text-white" to="">Another action</Link></li>
-                      <li><Link className="dropdown-item text-white" to="">Something else here</Link></li>
+                      <li><Link className="dropdown-item text-white" to="">Category 1</Link></li>
+                      <li><Link className="dropdown-item text-white" to="">Category 2</Link></li>
+                      <li><Link className="dropdown-item text-white" to="">Category 3</Link></li>
                     </ul>
                   </div>
                 </div>
