@@ -7,7 +7,7 @@ const ProductCard = () => {
     return (
         <>
             <div className="col-3">
-                <div className="product-card position-relative">
+                <Link className="product-card position-relative">
                     <div className="wishlist-icon position-absolute">
                         <Link>
                             <img src="images/wish.svg" alt="wishlist" />
@@ -15,9 +15,11 @@ const ProductCard = () => {
                     </div>
                     <div className="product-image">
                         <img src="images/watch.jpg" alt="product image" />
+                        {/* <img src="images/watch-1.avif" alt="product image" /> */}
+
                     </div>
                     <div className="product-details">
-                        <h6 className="brand">Havels</h6>
+                        <h6 className=" brand">Havels</h6>
                         <h5 className="product-title">
                             Kids headphones bulk 10 pack multi colored for students
                         </h5>
@@ -43,7 +45,7 @@ const ProductCard = () => {
                             </Link>
                         </div>
                     </div>
-                </div>
+                </Link>
             </div>
         </>
     )
