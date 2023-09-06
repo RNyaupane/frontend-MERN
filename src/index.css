@@ -348,7 +348,7 @@ a {
 .filter-card{
     background-color: var(--color-white);
     border-radius: 10px;
-    padding: 10px 15px;
+    padding: 15px 15px 25px;
 }
 .filter-title{
     font-size: 16px;
@@ -357,18 +357,63 @@ a {
     color: var(--color-1c1c1b);
     margin-bottom: 20px;
 }
-.filter-card ul{
+.filter-card ul,
+.filter-card .form-check-label{
     list-style-type: none;
     font-size: 13px;
     line-height: 30px;
     color: var(--color-777);
     cursor: pointer;
 }
+.filter-card .form-check-input{
+    cursor: pointer;
+    box-shadow: none;
+    border: 1px solid var(--color-3b4149);
+}
+.filter-card .form-check-input:checked{
+    cursor: pointer;
+    box-shadow: none;
+    background-color: var(--color-3b4149);
+    border: 1px solid var(--color-3b4149);
+}
 .sub-title{
     font-size: 14px;
     font-weight: 600;
     color: var(--color-1c1c1b);
+    margin-top:20px ;
     margin-bottom: 15px;
+}
+.colors{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+}
+.colors li{
+    width: 20px;
+    height: 20px;
+    background-color: red ;
+    border-radius: 50%;
+}
+.random-products h5{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.random-products:first-child{
+    border-bottom: 1px solid var(--color-ededed);
+}
+.filter-sort-grid{
+    padding: 10px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+.grid img{
+    width: 34px;
+    height: 34px;
+    background-color: #f2f2f2;
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 /* Our Store Ends here */
 
