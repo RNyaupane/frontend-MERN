@@ -1,6 +1,5 @@
 import React from 'react'
 import BreadCrumb from '../components/BreadCrumb'
-import { Helmet } from "react-helmet";
 import Meta from '../components/Meta';
 import BlogCard from '../components/BlogCard';
 
