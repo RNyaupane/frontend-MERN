@@ -32,6 +32,10 @@ const ProductCard = (props) => {
                             edit={false}
                             activeColor="#ffd700"
                         />
+                        <p className={`description ${grid=== 12? "d-bloc":"d-none"}`} >
+                        A watch is a small clock carried or worn by a person. 
+                        It makes it easy to see the time. It is also a fashion accessory for men and women, and expensive watches are designed for this purpose.
+                        </p>
                         <p className="price">$100.00</p>
                     </div>
                     <div className="action-bar position-absolute">
