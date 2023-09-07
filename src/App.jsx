@@ -14,6 +14,10 @@ import ForgotPassword from './pages/ForgotPassword'
 import SignUp from './pages/SignUp'
 import ResetPassword from './pages/ResetPassword'
 import SingleBlog from './pages/SingleBlog'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import RefundPolicy from './pages/RefundPolicy'
+import ShippingPolicy from './pages/ShippingPolicy'
+import TermAndConditions from './pages/TermAndConditions'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,6 +39,11 @@ function App() {
               <Route path='signup' element={<SignUp/>}/>
               <Route path='forgot-password' element={<ForgotPassword/>}/>
               <Route path='reset-password' element={<ResetPassword/>}/>
+              
+              <Route path='privacy-policy' element={<PrivacyPolicy/>}/>
+              <Route path='refund-policy' element={<RefundPolicy/>}/>
+              <Route path='shipping-policy' element={<ShippingPolicy/>}/>
+              <Route path='term-conditions' element={<TermAndConditions/>}/>
             </Route>
           </Routes>
         </BrowserRouter>

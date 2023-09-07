@@ -585,6 +585,16 @@ a {
 }
 /* Auth Card Ends here */
 
+
+
+
+/* Policy pages */
+.policy{
+    background-color: var(--color-white);
+    padding: 30px;
+}
+/* Policy pages ends here */
+
 /* Footer Starts Here */
 footer {
     background-color: var(--color-232f3e);
