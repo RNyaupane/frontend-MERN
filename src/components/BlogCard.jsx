@@ -12,7 +12,7 @@ const BlogCard = () => {
                     <p className='date'>11 dec 2023</p>
                     <h5 className="title">A Beautiful Sunday Morning Renaissance</h5>
                     <p className="desc">A product is any item or service you sell to serve a customer's need or want.</p>
-                    <Link to='' className='button'>Read More</Link>
+                    <Link to='/blog/:id' className='button'>Read More</Link>
                 </div>
             </div>
         </>
