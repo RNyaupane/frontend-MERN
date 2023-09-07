@@ -20,6 +20,7 @@ import ShippingPolicy from './pages/ShippingPolicy'
 import TermAndConditions from './pages/TermAndConditions'
 import SingleProduct from './pages/SingleProduct'
 import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,6 +40,7 @@ function App() {
               <Route path='compare-product' element={<CompareProduct/>}/>
               <Route path='wishlist' element={<Wishlist/>}/>
               <Route path='cart' element={<Cart/>}/>
+              <Route path='checkout' element={<Checkout/>}/>
               <Route path='login' element={<Login/>}/>
               <Route path='signup' element={<SignUp/>}/>
               <Route path='forgot-password' element={<ForgotPassword/>}/>
@@ -58,4 +60,4 @@ function App() {
 export default App
 
 
-// 5:40:07 
+// 8:38:11
