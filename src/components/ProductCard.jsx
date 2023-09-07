@@ -1,6 +1,13 @@
 import React from 'react'
 import ReactStars from "react-rating-stars-component";
 import { Link, useLocation } from 'react-router-dom';
+import wish from '../images/wish.svg'
+import wishlist from '../images/wishlist.svg'
+import watch from '../images/watch.jpg'
+import watch2 from '../images/watch-dark.jpeg'
+import addcart from '../images/add-cart.svg'
+import prodcompare from '../images/prodcompare.svg'
+import view from '../images/view.svg'
 
 
 const ProductCard = (props) => {
@@ -12,11 +19,11 @@ const ProductCard = (props) => {
                 <Link to='/product/:id' className="product-card position-relative">
                     <div className="wishlist-icon position-absolute">
                         <Link>
-                            <img src="images/wish.svg" alt="wishlist" />
+                            <img src={wish} alt="wishlist" />
                         </Link>
                     </div>
                     <div className="product-image">
-                        <img src="images/watch.jpg" alt="product image" />
+                        <img src={watch} alt="product image" />
                         {/* <img src="images/watch-1.avif" alt="product image" /> */}
 
                     </div>
@@ -41,13 +48,13 @@ const ProductCard = (props) => {
                     <div className="action-bar position-absolute">
                         <div className="d-flex flex-column gap-15">
                             <Link>
-                                <img src="images/view.svg" alt="view" />
+                                <img src={view} alt="view" />
                             </Link>
                             <Link>
-                                <img src="images/prodcompare.svg" alt="compare" />
+                                <img src={prodcompare} alt="compare" />
                             </Link>
                             <Link>
-                                <img src="images/add-cart.svg" alt="add cart" />
+                                <img src={addcart} alt="add cart" />
                             </Link>
                         </div>
                     </div>
