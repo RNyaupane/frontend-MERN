@@ -63,7 +63,7 @@ a {
     color: var(--color-white);
     padding: 13px 33px;
     font-size: 14px;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 
 .button:hover {
@@ -655,12 +655,13 @@ a {
     color: var(--color-1c1c1b);
 }
 
-.auth-card .signup {
+.signup {
     background-color: var(--color-febd69);
     color: var(--color-131921);
+    border: none;
 }
 
-.auth-card .signup:hover {
+.signup:hover {
     color: var(--color-white);
     background-color: var(--color-232f3e);
 }
@@ -670,6 +671,18 @@ a {
 
 
 /* Single Product */
+.description-wrapper h4,
+.reviews-wrapper h3 {
+    font-size: 26px;
+    color: var(--color-1c1c1b);
+    margin-bottom: 10px;
+}
+
+.description-wrapper p {
+    font-size: 14px;
+    color: var(--color-777);
+}
+
 .review-inner-wrapper {
     background-color: var(--color-white);
     padding: 30px;
@@ -709,6 +722,72 @@ a {
     color: var(--color-777);
 }
 
+.main-product-image {
+    padding: 20px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+
+.main-product-image>div {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main-product-image img {
+    width: 100% !important;
+    height: 500px !important;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.other-product-images {
+    background-color: var(--color-white);
+    padding: 20px;
+}
+
+.other-product-images>div {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 48%;
+}
+
+.main-product-details {
+    padding: 30px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.main-product-details h3.title{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-1c1c1b);
+    margin-bottom: 10px;
+}
+.main-product-details p.price{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--color-1c1c1b);
+    margin-bottom: 10px;
+}
+.main-product-details a.review-btn, 
+.t-review{
+    color: var(--color-777);
+    font-size: 13px;
+}
+.product-heading{
+    font-size: 14px;
+    color: #1c1c1b;
+    margin-bottom: 0px;
+}
+.product-data{
+    font-size: 13px;
+    color: var(--color-777);
+    margin-bottom: 0px;
+}
+
 /* Single Product Ends here */
 
 
@@ -736,5 +815,8 @@ footer .input-group-text {
     color: var(--color-white);
     padding: 8px 17px;
 }
-
+.main-product-details a{
+    font-size: 14px;
+    color: var(--color-777);
+}
 /* Footer Ends Here */
