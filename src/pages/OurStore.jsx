@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import Meta from '../components/Meta';
 import ReactStars from "react-rating-stars-component";
 import ProductCard from '../components/ProductCard';
+import Color from '../components/Color';
 
 
 
@@ -64,18 +65,7 @@ const OurStore = () => {
                                     </div>
                                     <h5 className="sub-title">Colors</h5>
                                     <div className="">
-                                        <ul className='colors p-0'>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ul>
+                                        <Color/>
                                     </div>
                                     <h5 className="sub-title">Size</h5>
                                     <div className="">
@@ -182,6 +172,8 @@ const OurStore = () => {
                             </div>
                             <div className="products-list pb-5">
                                 <div className="d-flex gap-10 flex-wrap">
+                                    <ProductCard grid={grid} />
+                                    <ProductCard grid={grid} />
                                     <ProductCard grid={grid} />
                                     <ProductCard grid={grid} />
                                     <ProductCard grid={grid} />

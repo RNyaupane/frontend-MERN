@@ -8,6 +8,7 @@ import Contact from './pages/Contact'
 import OurStore from './pages/OurStore'
 import Blog from './pages/Blog'
 import CompareProduct from './pages/CompareProduct'
+import Wishlist from './pages/Wishlist'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +24,7 @@ function App() {
               <Route path='store' element={<OurStore/>}/>
               <Route path='blogs' element={<Blog/>}/>
               <Route path='compare-product' element={<CompareProduct/>}/>
+              <Route path='wishlist' element={<Wishlist/>}/>
             </Route>
           </Routes>
         </BrowserRouter>
@@ -33,4 +35,4 @@ function App() {
 export default App
 
 
-// 5:40:07
+// 5:40:07 
