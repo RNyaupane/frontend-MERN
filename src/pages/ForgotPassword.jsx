@@ -9,20 +9,22 @@ const ForgotPassword = () => {
       <Meta title={'Forgot Password'} />
       <BreadCrumb title='Forgot Password' />
       <div className="forgot-password-wrapper py-5 home-wrapper-2">
-        <div className="row">
-          <div className="col-12">
-            <div className="auth-card">
-              <h3 className='text-center mb-3'>Reset Password</h3>
-              <p className='text-center my-2 mb-3'>We will send you email to reset your password</p>
-              <form action="" className='d-flex flex-column gap-15 mt-4'>
-                <div className="">
-                  <input type='email' name='email' placeholder='Email' className="form-control py-2" />
-                </div>
-                <div className="d-flex flex-column mt-4 justify-content-center gap-15 align-items-center">
-                  <button className='button border-0' type='submit'>Submit</button>
-                  <Link to='/login' className=''>Cancel</Link>
-                </div>
-              </form>
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <div className="auth-card">
+                <h3 className='text-center mb-3'>Reset Password</h3>
+                <p className='text-center my-2 mb-3'>We will send you email to reset your password</p>
+                <form action="" className='d-flex flex-column gap-15 mt-4'>
+                  <div className="">
+                    <input type='email' name='email' placeholder='Email' className="form-control py-2" />
+                  </div>
+                  <div className="d-flex flex-column mt-4 justify-content-center gap-15 align-items-center">
+                    <button className='button border-0' type='submit'>Submit</button>
+                    <Link to='/login' className=''>Cancel</Link>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
