@@ -827,6 +827,18 @@ a {
 
 
 
+/* Checkout page starts here */
+.total{
+    font-size: 14px;
+    color: var(--color-1c1c1b);
+}
+.total-price{
+    font-size: 16px;
+    color: var(--color-777);
+}
+/* Checkout page ends here */
+
+
 /* Policy pages */
 .policy {
     background-color: var(--color-white);
