@@ -28,7 +28,7 @@ const SingleProduct = () => {
             <Meta title={'Dynamic Product Name'} />
             <BreadCrumb title='Dynamic Product Name' />
             <Container class1="main-products-wrapper py-5 home-wrapper-2">
-                <div className="row">
+                <div className="row bg-white">
                     <div className="col-6">
                         <div className="main-product-image">
                             <div className="">
@@ -42,7 +42,7 @@ const SingleProduct = () => {
                                 />
                             </div>
                         </div>
-                        <div className="other-product-images d-flex flex-wrap gap-15">
+                        <div className="other-product-images d-flex flex-wrap gap-15 justify-content-center">
                             <div className="">
                                 <img
                                     src="https://www.thejewelleryeditor.com/media/images_thumbnails/filer_public_thumbnails/filer_public/c6/d2/c6d28e02-1ac0-49b1-8dd4-04d45309f281/iwc-big-pilot-watch.jpg__1536x0_q75_crop-scale_subsampling-2_upscale-false.jpg"

@@ -25,7 +25,7 @@ const Header = () => {
           <div className="row d-flex align-items-center">
             <div className="col-3 d-block">
               <h2>
-                <Link className='text-white'>DEV</Link>
+                <Link className='text-white'>LOGO</Link>
               </h2>
             </div>
             <div className="col-4">

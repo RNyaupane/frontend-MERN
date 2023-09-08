@@ -745,9 +745,9 @@ a {
 }
 
 .other-product-images>div {
-    padding: 20px;
+    padding: 5px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    width: 48%;
+    width: 20%;
 }
 
 .main-product-details {
