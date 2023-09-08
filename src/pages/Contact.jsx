@@ -4,6 +4,7 @@ import Meta from '../components/Meta';
 import { AiOutlineHome, AiOutlineMail } from 'react-icons/ai'
 import { BiPhoneCall, BiInfoCircle } from 'react-icons/bi'
 import Container from '../components/Container';
+import CustomInput from '../components/CustomInput';
 const Contact = () => {
   return (
     <>
@@ -27,15 +28,9 @@ const Contact = () => {
               <div className="">
                 <h3 className="contact-title mb-4">Contact</h3>
                 <form action="" className='d-flex flex-column gap-15'>
-                  <div className="">
-                    <input type="text" className="form-control" placeholder='Name' />
-                  </div>
-                  <div className="">
-                    <input type="email" className="form-control" placeholder='Email' />
-                  </div>
-                  <div className="">
-                    <input type="tel" className="form-control" placeholder='Mobile Number' />
-                  </div>
+                  <CustomInput type="text" className="form-control" placeholder='Name' />
+                  <CustomInput type="email" className="form-control" placeholder='Email' />
+                  <CustomInput type="tel" className="form-control" placeholder='Mobile Number' />
                   <div className="">
                     <textarea name="" id="" className='w-100 form-control' cols="30" rows="4" placeholder='Message'></textarea>
                   </div>
