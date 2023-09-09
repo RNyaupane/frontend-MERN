@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Layout from './components/Layout'
@@ -23,7 +22,6 @@ import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
