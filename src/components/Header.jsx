@@ -22,7 +22,7 @@ const Header = () => {
       </header>
       <header className="header-upper py-3">
         <div className="container-xxl mw-100 px-5">
-          <div className="row d-flex align-items-center" style={{width:'109%'}}>
+          <div className="row d-flex align-items-center" style={{ width: '109%' }}>
             <div className="col-3 d-block">
               <h2>
                 <Link className='text-white'>LOGO</Link>
@@ -124,11 +124,12 @@ const Header = () => {
               <NavLink to='/blogs' className="nav-link text-white">Blogs</NavLink>
               <NavLink to='/contact' className="nav-link text-white">Contact</NavLink>
             </div>
-            <div className="navbar-nav gap-30 ms-auto text-center ps-5 py-3"> {/* Wrap only the Login link in a separate div */}
-              <Link to='/login' className='d-flex align-items-center gap-10 text-white'>
-                    <img src="/images/user.svg" alt="user" />
-                    <p className='mb-0 d-none d-lg-block fs-5 pe-3'>Login </p>
-                  </Link>
+            <div className="navbar-nav gap-30 ms-auto text-center d-flex align-items-center mt-4 mt-lg-0 ps-5 py-3"> {/* Wrap only the Login link in a separate div */}
+              <Link to='/login' className='d-flex d-none d-lg-flex align-items-center gap-10 text-white'>
+                <img src="/images/user.svg" className='' alt="user" />
+                <p className='mb-0 fs-5 pe-3'>Login </p>
+              </Link>
+              <NavLink to='/contact' className="nav-link d-lg-none text-white bg-dark py-2" style={{borderRadius:"25px",width:'100px'}}>Login</NavLink>
             </div>
           </div>
         </div>

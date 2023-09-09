@@ -27,7 +27,7 @@ const Footer = () => {
       </footer>
       <footer className='py-4'>
         <div className="container-xxl">
-          <div className="container mx-2 text-center text-md-start">
+          <div className="container mx-2 text-center text-md-start" style={{display:"contents"}}>
             <div className="row">
               <div className="col-md-4 col-12 mb-5">
                 <h2 className="text-white mb-4">Contact Us</h2>
@@ -59,7 +59,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="col-12 col-md-3 mb-5">
-                <h2 className="text-white mb-4">Information</h2>
+                <h2 className="text-white h3 mb-4">Information</h2>
                 <div className="footer-links d-flex flex-column">
                   <Link to="/privacy-policy" className="text-white py-2 mb-1">Privacy Policy</Link>
                   <Link to="/refund-policy" className="text-white py-2 mb-1">Refund Policy</Link>
@@ -69,15 +69,15 @@ const Footer = () => {
                 </div>
               </div>
               <div className="col-12 col-md-3 mb-5">
-                <h2 className="text-white mb-4">Account</h2>
+                <h2 className="text-white h3 mb-4">Account</h2>
                 <div className="footer-links d-flex flex-column">
                   <Link to="" className="text-white py-2 mb-1">About Us</Link>
                   <Link to="" className="text-white py-2 mb-1">Faq</Link>
                   <Link to="" className="text-white py-2 mb-1">Contact</Link>
                 </div>
               </div>
-              <div className="col-12 col-md-2 mb-5">
-                <h2 className="text-white mb-4">Quick&nbsp;Links</h2>
+              <div className="col-12 col-md-2 mb-5 ">
+                <h2 className="text-white h3 mb-4">Links</h2>
                 <div className="footer-links d-flex flex-column">
                   <Link to="" className="text-white py-2 mb-1">Laptops</Link>
                   <Link className="text-white py-2 mb-1">Headphones</Link>
