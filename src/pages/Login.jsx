@@ -12,8 +12,8 @@ const Login = () => {
             <BreadCrumb title='Login' />
             <Container class1="login-wrapper py-5 home-wrapper-2">
                 <div className="row">
-                    <div className="col-12">
-                        <div className="auth-card">
+                    <div className="col-lg-12">
+                        <div className="auth-card ">
                             <h3 className='text-center mb-3'>Login</h3>
                             <form action="" className='d-flex flex-column gap-15 mt-4'>
                                 <CustomInput type='email' name='email' placeholder='Email' />

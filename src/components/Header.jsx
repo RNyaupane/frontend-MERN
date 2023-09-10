@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs'
+import searchLogo from '../images/search.svg'
+import {FaSearch} from 'react-icons/fa'
+
+
 const Header = () => {
+  const [isSearchVisible, setIsSearchVisible] = useState(false);
+  const [isButtonBlurred, setIsButtonBlurred] = useState(false);
+
+  const toggleSearch = () => {
+    setIsSearchVisible(!isSearchVisible);
+    setIsButtonBlurred(!isButtonBlurred);
+  };
   return (
     <>
-      <header className='header-top-strip py-3'>
+      <header className='header-top-strip py-3 d-none d-md-flex'>
         <div className="container-xxl mw-100">
           <div className="row mx-4">
             <div className="col-6">
@@ -21,23 +32,55 @@ const Header = () => {
         </div>
       </header>
       <header className="header-upper py-3">
-        <div className="container-xxl mw-100 px-5">
-          <div className="row d-flex align-items-center" style={{ width: '109%' }}>
+        <div className="container-xxl mw-100 px-2 ps-sm-3">
+          <div className="row d-flex align-items-center " style={{ width: '109%' }}>
             <div className="col-3 d-block">
               <h2>
                 <Link className='text-white'>LOGO</Link>
               </h2>
             </div>
             <div className="col-4 ">
-              <div className="input-group justify-content-end d-none d-sm-flex">
+              <div className="input-group justify-content-end d-none d-md-flex">
                 <input type="text" className="form-control py-2 " placeholder="Search product here..." aria-label="Search product here..." aria-describedby="basic-addon2" />
                 <span className="input-group-text p-3" id="basic-addon2 cursor-pointer">
                   <BsSearch className='fs-6' />
                 </span>
               </div>
+
+              {/* SEARCH LOGO */}
+              <div className="text-center d-md-none">
+                <div className={`col text-end${isSearchVisible ? ' blur-background' : ''}`}>
+                  <div className={`dropdown${isSearchVisible ? ' show' : ''}`}>
+                    <button
+                      className={`btn d-flex align-items-center justify-content-end gap-10 text-white border-0 ${isButtonBlurred ? ' blur' : ''}`}
+                      id="searchDropdown"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded={isSearchVisible}
+                      onClick={toggleSearch}
+                      style={{ boxShadow: "none" }}
+                    >
+                      <img src={searchLogo} width={30} alt="search" />
+                    </button>
+                  </div>
+                </div>
+                <div className={`p-1 border-dark dropdown-menu${isSearchVisible ? ' show' : ''}`} aria-labelledby="searchDropdown">
+                  <form className="p-0 m-0">
+                    <div className="form-group d-flex">
+                      {/* <input type="text" className="form-control rounded-0 border-0" id="searchInput" placeholder="Search" /> */}
+                      <input className="form-control border-1 me-1" type="search" placeholder="Search" id="searchInput" aria-label="Search" />
+                      <button className="btn btn-success" type="submit">
+                        {/* <i className="fas fa-search"></i> */}
+                        <FaSearch/>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
             <div className="col-4 ms-4 ">
-              <div className="header-upper-links d-flex align-items-center justify-content-between">
+              <div className="header-upper-links gap-15 d-flex align-items-center justify-content-between">
                 <div className="">
                   <Link to='/compare-product' className='d-flex align-items-center gap-10 text-white'>
                     <img src="/images/compare.svg" alt="compare" />
@@ -129,7 +172,7 @@ const Header = () => {
                 <img src="/images/user.svg" className='' alt="user" />
                 <p className='mb-0 fs-5 pe-3'>Login </p>
               </Link>
-              <NavLink to='/contact' className="nav-link d-lg-none text-white bg-dark py-2" style={{borderRadius:"25px",width:'100px'}}>Login</NavLink>
+              <NavLink to='/login' className="nav-link d-lg-none text-white bg-dark py-2" style={{ borderRadius: "25px", width: '100px' }}>Login</NavLink>
             </div>
           </div>
         </div>

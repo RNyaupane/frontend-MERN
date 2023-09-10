@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="col-sm-5 mb-4 mb-sm-0 ">
               <div className="footer-top-data d-flex gap-10 align-items-center">
                 <img src={newsLetter} alt="newsletter" />
-                <h2 className='mb-0 text-white d-flex'><span className='d-none d-md-block'>Sign Up for</span>Newsletter</h2>
+                <h2 className='mb-0 text-white d-flex'>Get In Touch</h2>
               </div>
             </div>
             <div className="col-sm-6">
@@ -42,7 +42,7 @@ const Footer = () => {
                   <a href="mailto:roshannyaupane01@gmaul.com" className="mt-3 d-block mb-2 text-white">
                     roshannyaupane01@gmail.com
                   </a>
-                  <div className="social-icons d-flex justify-content-center justify-content-md-start   gap-2 gap-md-30 mt-4">
+                  <div className="social-icons d-flex justify-content-center justify-content-md-start   gap-4 gap-md-30 mt-4">
                     <a className="text-white" href="">
                       <BsLinkedin className="fs-4" />
                     </a>

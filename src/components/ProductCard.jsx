@@ -15,7 +15,7 @@ const ProductCard = (props) => {
     const { grid } = props;
     return (
         <>
-            <div className={location.pathname === '/product' ? `gr-${grid}` : 'col-11 col-md-6 col-lg-3 ms-4 mx-md-0'}>
+            <div className={location.pathname === '/product' ? `gr-${grid}` : 'col-11 col-md-6 col-lg-3 ms-4 mx-md-0 mb-3'}>
                 <Link to='/product/:id' className="product-card position-relative">
                     <div className="wishlist-icon position-absolute">
                         <button className='border-0 bg-transparent'>
@@ -23,7 +23,7 @@ const ProductCard = (props) => {
                         </button>
                     </div>
                     <div className="product-image d-flex justify-content-center">
-                        <img src={watch} alt="product image" width={300}/>
+                        <img src={watch} alt="product image" width={250}/>
                     </div>
                     <div className="product-details">
                         <h6 className=" brand">Havels</h6>
