@@ -17,7 +17,8 @@ const ForgotPassword = () => {
               <h3 className='text-center mb-3'>Reset Password</h3>
               <p className='text-center my-2 mb-3'>We will send you email to reset your password</p>
               <form action="" className='d-flex flex-column gap-15 mt-4'>
-                <CustomInput type='email' name='email' placeholder='Email' />
+                <CustomInput
+className="form-control custom-input" type='email' name='email' placeholder='Email' />
                 <div className="d-flex flex-column mt-4 justify-content-center gap-15 align-items-center">
                   <button className='button border-0' type='submit'>Submit</button>
                   <Link to='/login' className=''>Cancel</Link>

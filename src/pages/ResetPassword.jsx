@@ -16,8 +16,10 @@ const ResetPassword = () => {
                         <div className="auth-card">
                             <h3 className='text-center mb-3'>Reset Password </h3>
                             <form action="" className='d-flex flex-column gap-15 mt-4'>
-                                <CustomInput type='password' name='password' placeholder='New Password'/>
-                                <CustomInput type='password' name='confirmPassword' placeholder='Confirm New Password'/>
+                                <CustomInput
+className="form-control custom-input" type='password' name='password' placeholder='New Password'/>
+                                <CustomInput
+className="form-control custom-input" type='password' name='confirmPassword' placeholder='Confirm New Password'/>
                                 <div className="mt-1">
                                 </div>
                                 <div className="d-flex flex-column mt-2 justify-content-center gap-15 align-items-center">

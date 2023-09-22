@@ -28,9 +28,12 @@ const Contact = () => {
               <div className="">
                 <h3 className="contact-title mb-4">Contact</h3>
                 <form action="" className='d-flex flex-column gap-15'>
-                  <CustomInput type="text" className="form-control" placeholder='Name' />
-                  <CustomInput type="email" className="form-control" placeholder='Email' />
-                  <CustomInput type="tel" className="form-control" placeholder='Mobile Number' />
+                  <CustomInput
+className="form-control custom-input" type="text" className="form-control" placeholder='Name' />
+                  <CustomInput
+className="form-control custom-input" type="email" className="form-control" placeholder='Email' />
+                  <CustomInput
+className="form-control custom-input" type="tel" className="form-control" placeholder='Mobile Number' />
                   <div className="">
                     <textarea name="" id="" className='w-100 form-control' cols="30" rows="4" placeholder='Message'></textarea>
                   </div>
