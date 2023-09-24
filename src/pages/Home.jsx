@@ -314,33 +314,6 @@ const Home = () => {
           <ProductCard />
         </div>
       </Container>
-
-      <Container class1='blog-wrapper py-5 home-wrapper-2'>
-        <div className="row d-flex justify-content-center">
-          <div className="col-12">
-            <h3 className="section-heading">
-              &nbsp; Our Latest Blogs
-            </h3>
-          </div>
-          <div className="row ">
-            <Marquee className='d-flex'>
-              <div className="col-10">
-                <BlogCard />
-              </div>
-              <div className="col-10">
-                <BlogCard />
-              </div>
-              <div className="col-10">
-                <BlogCard />
-              </div>
-              <div className="col-10">
-                <BlogCard />
-              </div>
-            </Marquee>
-          </div>
-        </div>
-      </Container >
-
     </>
   )
 }
