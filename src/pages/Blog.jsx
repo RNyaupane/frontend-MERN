@@ -25,21 +25,40 @@ const Blog = () => {
                                 </ul>
                             </div>
                         </div>
+                        <div className="filter-card mb-3">
+                            <h3 className="filter-title">
+                                Sort By
+                            </h3>
+                            <div className="">
+                                <ul className='ps-0'>
+                                    <li>Relevance</li>
+                                    <li>Uploaded Date</li>
+                                    <li>View Count</li>
+                                    <li>Rating</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="filter-card mb-3">
+                            <h3 className="filter-title">
+                                Upload Date
+                            </h3>
+                            <div className="">
+                                <ul className='ps-0'>
+                                    <li>Last Hour</li>
+                                    <li>Today</li>
+                                    <li>This Week</li>
+                                    <li>This Month</li>
+                                    <li>This Year</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-9">
                         <div className="row">
-                            <div className="col-6 mb-4">
-                                <BlogCard />
-                            </div>
-                            <div className="col-6 mb-4">
-                                <BlogCard />
-                            </div>
-                            <div className="col-6 mb-4">
-                                <BlogCard />
-                            </div>
-                            <div className="col-6 mb-4">
-                                <BlogCard />
-                            </div>
+                        <BlogCard />
+                        <BlogCard />
+                        <BlogCard />
+
                         </div>
                     </div>
                 </div>

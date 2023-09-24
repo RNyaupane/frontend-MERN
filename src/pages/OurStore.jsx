@@ -18,7 +18,7 @@ const OurStore = () => {
             <BreadCrumb title='Our Store' />
             <Container class1="store-wrapper home-wrapper-2 py-5">
                 <div className="row">
-                    <div className="col-3">
+                    <div className="col-3 d-none d-md-block">
                         <div className="filter-card mb-3">
                             <h3 className="filter-title">
                                 Shop By Categories
@@ -143,7 +143,7 @@ const OurStore = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-9">
+                    <div className="col-auto col-md-9">
                         <div className="filter-sort-grid mb-4">
                             <div className="d-flex justify-content-between align-items-center">
                                 <div className="d-flex align-items-center gap-10">
