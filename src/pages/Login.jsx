@@ -4,8 +4,25 @@ import Meta from '../components/Meta';
 import { Link } from 'react-router-dom';
 import Container from '../components/Container';
 import CustomInput from '../components/CustomInput';
+import { useFormik } from 'formik';
+import * as Yup from 'yup'; //For Form Validation
+
+const loginSchema = Yup.object({
+    email: Yup.string().email('Invalid Email').required('Email is required'),
+    password: Yup.string().required('Password is required'),
+});
 
 const Login = () => {
+    const formik = useFormik({
+        initialValues: {
+            email: '',
+            password: '',
+        },
+        validationSchema: loginSchema,
+        onSubmit: values => {
+            // alert(JSON.stringify(values, null, 2));
+        },
+    });
     return (
         <>
             <Meta title={'Login'} />
@@ -15,11 +32,38 @@ const Login = () => {
                     <div className="col-lg-12">
                         <div className="auth-card ">
                             <h3 className='text-center mb-3'>Login</h3>
-                            <form action="" className='d-flex flex-column gap-15 mt-4'>
+                            <form action="" onSubmit={formik.handleSubmit} className='d-flex flex-column mt-4'>
+                                <div className="error">
+                                    {formik.touched.email && formik.errors.email ? (
+                                        <div>&nbsp;{formik.errors.email}</div>
+                                    ) : null}
+                                </div>
                                 <CustomInput
-className="form-control custom-input" type='email' name='email' placeholder='Email' />
+                                    className="form-control custom-input mb-3"
+                                    type='email'
+                                    name='email'
+                                    placeholder='Email'
+                                    id="email"
+                                    val={formik.values.email}
+                                    onCh={formik.handleChange('email')}
+                                    onBl={formik.handleChange('email')}
+
+                                />
+                                <div className="error">
+                                    {formik.touched.password && formik.errors.password ? (
+                                        <div>&nbsp;{formik.errors.password}</div>
+                                    ) : null}
+                                </div>
                                 <CustomInput
-className="form-control custom-input" type='password' name='password' placeholder='Password' />
+                                    className="form-control custom-input mb-3"
+                                    type='password'
+                                    name='password'
+                                    placeholder='Password'
+                                    id="password"
+                                    val={formik.values.password}
+                                    onCh={formik.handleChange('password')}
+                                    onBl={formik.handleChange('password')}
+                                />
                                 <div className="mt-1">
                                     <Link to='/forgot-password'>Forgot Password?</Link>
                                 </div>
