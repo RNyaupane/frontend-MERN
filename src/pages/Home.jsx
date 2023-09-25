@@ -8,23 +8,78 @@ import Container from '../components/Container';
 import { services } from '../utils/Data';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import famous3 from '../images/famous-3.webp'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay, EffectCoverflow, EffectFade } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
+import "swiper/css/effect-fade";
 
 
 const Home = () => {
+
   return (
     <>
       <Container class1='home-wrapper-1 py-5' >
         <div className="row">
           <div className="col-md-12 col-lg-6 mb-4 mx-6">
-            <div className="main-banner position-relative ">
-              <img src="images/main-banner-1.jpg" className='img-fluid rounded-3' alt="main banner" />
-              <div className="main-banner-content position-absolute">
-                <h4>SUPERCHARGED FOR PROS</h4>
-                <h5>iPad S13+ Pro.</h5>
-                <p>From $999.00 <br /> or $41.62/mo.</p>
-                <Link className='button'>BUY NOW</Link>
-              </div>
-            </div>
+            <Swiper
+              spaceBetween={30}
+              effect={"fade"}
+              loop={true}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
+              modules={[EffectFade, Autoplay, Pagination]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <div className="main-banner position-relative ">
+                  <img src="images/main-banner-3.jpg" className='img-fluid rounded-3' alt="main banner" />
+                  <div className="main-banner-content position-absolute">
+                    <h4>Special Offer</h4>
+                    <h5>iPhone 15 Pro.</h5>
+                    <p>From $999.00 <br /> or $41.62/mo.</p>
+                    <Link className='button'>BUY NOW</Link>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="main-banner position-relative ">
+                  <img src="images/main-banner-4.jpg" className='img-fluid rounded-3' alt="main banner" />
+                  <div className="main-banner-content position-absolute">
+                    <h4>Special Combo</h4>
+                    <h5>Macbook Air M2</h5>
+                    <p>From $999.00 <br /> or $41.62/mo.</p>
+                    <Link className='button'>BUY NOW</Link>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="main-banner position-relative ">
+                  <img src="images/main-banner-5.jpg" className='img-fluid rounded-3' alt="main banner" />
+                  <div className="main-banner-content position-absolute">
+                    <h4>Save time save money</h4>
+                    <h5>Super Offer</h5>
+                    <p>Get upto 20% discount <br /> on Sale</p>
+                    <Link to='/product' className='button'>SHOP NOW</Link>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="main-banner position-relative ">
+                  <img src="images/main-banner-1.jpg" className='img-fluid rounded-3' alt="main banner" />
+                  <div className="main-banner-content position-absolute">
+                    <h4>Skyworth Brand</h4>
+                    <h5>Festival Offer</h5>
+                    <p>Get a chance to win<br /> Samsung 24 inch TV</p>
+                    <Link to='/product' className='button'>SHOP NOW</Link>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
           <div className="col-md-12 col-lg-6">
             <div className="d-flex flex-wrap gap-10 justify-content-between align-items-center">
@@ -71,10 +126,12 @@ const Home = () => {
             <div className="d-flex flex-wrap justify-content-between">
               {services?.map((service, index) => (
                 <div className="d-flex align-items-center gap-15 mb-5 col-6 col-sm-6 col-md-6 col-lg-3" key={index}>
-                  <img src={service.image} alt="services" className="img-fluid" />
-                  <div className="">
-                    <h6>{service.title}</h6>
-                    <p className='mb-0'>{service.tagline}</p>
+                  <div className='px-1 '>
+                    <img src={service.image} alt="services" className="img-fluid" />
+                    <div className="">
+                      <h6>{service.title}</h6>
+                      <p className='mb-0'>{service.tagline}</p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -178,9 +235,86 @@ const Home = () => {
               Featured Collection
             </h3>
           </div>
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          <Swiper
+            // effect={'coverflow'}
+            loop={true}
+            autoplay={true}
+            spaceBetween={20}
+            grabCursor={true}
+            centeredSlides={true}
+            // slidesPerView={3}
+
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            pagination={true}
+            modules={[EffectCoverflow, Pagination]}
+            className="mySwiper"
+            breakpoints={{
+              350: {
+                slidesPerView: 2,
+              },
+              // when window width is >= 640px
+              640: {
+                width: 640,
+                slidesPerView: 2,
+              },
+              // when window width is >= 768px
+              768: {
+                width: 768,
+                slidesPerView: 3,
+              },
+            }}
+
+          >
+            <SwiperSlide><ProductCard /></SwiperSlide>
+            <SwiperSlide><ProductCard /></SwiperSlide>
+            <SwiperSlide><ProductCard /></SwiperSlide>
+            <SwiperSlide><ProductCard /></SwiperSlide>
+            <SwiperSlide><ProductCard /></SwiperSlide>
+            <SwiperSlide><ProductCard /></SwiperSlide>
+            <SwiperSlide><ProductCard /></SwiperSlide>
+          </Swiper>
+
+        </div>
+      </Container>
+
+      <Container class1='marquee-wrapper home-wrapper-2 py-5 '>
+        <div className="row">
+          <div className="col-12">
+            <div className="marquee-inner-wrapper card-wrapper">
+              <Marquee className='d-flex'>
+                <div className="mx-4 w-25">
+                  <img src="images/brand-01.png" alt="brand" />
+                </div>
+                <div className="mx-4 w-25">
+                  <img src="images/brand-02.png" alt="brand" />
+                </div>
+                <div className="mx-4 w-25">
+                  <img src="images/brand-03.png" alt="brand" />
+                </div>
+                <div className="mx-4 w-25">
+                  <img src="images/brand-04.png" alt="brand" />
+                </div>
+                <div className="mx-4 w-25">
+                  <img src="images/brand-05.png" alt="brand" />
+                </div>
+                <div className="mx-4 w-25">
+                  <img src="images/brand-06.png" alt="brand" />
+                </div>
+                <div className="mx-4 w-25">
+                  <img src="images/brand-07.png" alt="brand" />
+                </div>
+                <div className="mx-4 w-25">
+                  <img src="images/brand-08.png" alt="brand" />
+                </div>
+              </Marquee>
+            </div>
+          </div>
         </div>
       </Container>
 
@@ -264,40 +398,7 @@ const Home = () => {
           <SpecialProduct />
         </div>
       </Container>
-      <Container class1='marquee-wrapper home-wrapper-2 py-5 '>
-        <div className="row">
-          <div className="col-12">
-            <div className="marquee-inner-wrapper card-wrapper">
-              <Marquee className='d-flex'>
-                <div className="mx-4 w-25">
-                  <img src="images/brand-01.png" alt="brand" />
-                </div>
-                <div className="mx-4 w-25">
-                  <img src="images/brand-02.png" alt="brand" />
-                </div>
-                <div className="mx-4 w-25">
-                  <img src="images/brand-03.png" alt="brand" />
-                </div>
-                <div className="mx-4 w-25">
-                  <img src="images/brand-04.png" alt="brand" />
-                </div>
-                <div className="mx-4 w-25">
-                  <img src="images/brand-05.png" alt="brand" />
-                </div>
-                <div className="mx-4 w-25">
-                  <img src="images/brand-06.png" alt="brand" />
-                </div>
-                <div className="mx-4 w-25">
-                  <img src="images/brand-07.png" alt="brand" />
-                </div>
-                <div className="mx-4 w-25">
-                  <img src="images/brand-08.png" alt="brand" />
-                </div>
-              </Marquee>
-            </div>
-          </div>
-        </div>
-      </Container>
+
 
       <Container class1='popular-wrapper py-5 home-wrapper-2'>
         <div className="row">
@@ -307,13 +408,50 @@ const Home = () => {
             </h3>
           </div>
         </div>
-        <div className="row">
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </div>
-      </Container>
+        <Swiper
+          // effect={'coverflow'}
+          loop={true}
+          spaceBetween={20}
+          grabCursor={true}
+          centeredSlides={true}
+          // slidesPerView={3}
+
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={true}
+          modules={[EffectCoverflow, Pagination]}
+          className="mySwiper"
+          breakpoints={{
+            350: {
+              slidesPerView: 2,
+            },
+            // when window width is >= 640px
+            640: {
+              width: 640,
+              slidesPerView: 2,
+            },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 3,
+            },
+          }}
+
+        >
+          <SwiperSlide><ProductCard /></SwiperSlide>
+          <SwiperSlide><ProductCard /></SwiperSlide>
+          <SwiperSlide><ProductCard /></SwiperSlide>
+          <SwiperSlide><ProductCard /></SwiperSlide>
+          <SwiperSlide><ProductCard /></SwiperSlide>
+          <SwiperSlide><ProductCard /></SwiperSlide>
+          <SwiperSlide><ProductCard /></SwiperSlide>
+        </Swiper>
+      </Container >
     </>
   )
 }

@@ -1,22 +1,36 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import BreadCrumb from '../components/BreadCrumb'
 import { Helmet } from "react-helmet";
 import Meta from '../components/Meta';
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 import ReactStars from "react-rating-stars-component";
 import ProductCard from '../components/ProductCard';
 import Color from '../components/Color';
 import Container from '../components/Container';
-
+import { getAllProducts } from '../features/products/ProductSlice';
 
 
 const OurStore = () => {
     const [grid, setGrid] = useState(4);
 
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const productState = useSelector((state) => state.product.products)
+
+    useEffect(() => {
+        getProducts();
+    }, [])
+
+    const getProducts = () => {
+        dispatch(getAllProducts())
+    }
+
     return (
         <>
             <Meta title={'Our Store'} />
             <BreadCrumb title='Our Store' />
-            <Container class1="store-wrapper home-wrapper-2 py-5">
+            <Container class1="store-wrapper home-wrapper-2 py-3 py-md-5">
                 <div className="row">
                     <div className="col-3 d-none d-md-block">
                         <div className="filter-card mb-3">
@@ -144,7 +158,7 @@ const OurStore = () => {
                         </div>
                     </div>
                     <div className="col-auto col-md-9">
-                        <div className="filter-sort-grid mb-4">
+                        <div className="filter-sort-grid mb-4 d-none d-md-block">
                             <div className="d-flex justify-content-between align-items-center">
                                 <div className="d-flex align-items-center gap-10">
                                     <p className="mb-0 d-block">Sort&nbsp;By:</p>
@@ -160,24 +174,98 @@ const OurStore = () => {
                                     </select>
                                 </div>
                                 <div className="d-flex align-items-center gap-10">
-                                    <p className="totalproducts mb-0">21 Products</p>
+                                    <p className="totalproducts mb-0 d-none d-sm-block">21 Products</p>
                                     <div className="d-flex gap-10 align-items-center grid">
                                         <img onClick={() => setGrid(3)} src="images/gr4.svg" className='d-block img-fluid' alt="grid" />
                                         <img onClick={() => setGrid(4)} src="images/gr3.svg" className='d-block img-fluid' alt="grid" />
-                                        <img onClick={() => setGrid(6)} src="images/gr2.svg" className='d-block img-fluid' alt="grid" />
+                                        {/* <img onClick={() => setGrid(6)} src="images/gr2.svg" className='d-block img-fluid' alt="grid" /> */}
                                         <img onClick={() => setGrid(12)} src="images/gr.svg" className='d-block img-fluid' alt="grid" />
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div className="container-xxl px-1 px-md-4 py-0 bg-white mb-3 rounded-3 d-block d-md-none">
+                            <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
+                                <div className="carousel-inner">
+                                    <div className="carousel-item active">
+                                        <div className="d-flex flex-nowrap overflow-auto filter-card py-3">
+                                            <div className="col mx-2">
+                                                <div className="card text-dark border-0">
+                                                    <div className="card-body p-0">
+                                                        <select name="" className='form-control border-1  form-select' id="" defaultValue='manual'>
+                                                            <option value="manual">Category</option>
+                                                            <option value="best-selling">Watch</option>
+                                                            <option value="title-ascending">Tv</option>
+                                                            <option value="title-descending">Camera</option>
+                                                            <option value="title-descending">Laptop</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col mx-2">
+                                                <div className="card text-dark border-0">
+                                                    <div className="card-body p-0">
+                                                        <select name="" className='form-control border-1  form-select' id="" defaultValue='manual'>
+                                                            <option value="manual">Price</option>
+                                                            <option value="best-selling">High to Low</option>
+                                                            <option value="title-ascending">Low to high</option>
+                                                            <option value="title-descending">$50 to $100</option>
+                                                            <option value="title-descending">$100 and above</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col mx-2">
+                                                <div className="card text-dark border-0">
+                                                    <div className="card-body p-0">
+                                                        <select name="" className='form-control border-1 form-select ' id="" defaultValue='manual'>
+                                                            <option value="manual">Size</option>
+                                                            <option value="best-selling">Small</option>
+                                                            <option value="title-ascending">Medium</option>
+                                                            <option value="title-descending">Large</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col mx-2">
+                                                <div className="card text-dark border-0">
+                                                    <div className="card-body p-0">
+                                                        <select name="" className='form-control border-1  form-select' id="" defaultValue='manual'>
+                                                            <option value="manual">Sort By</option>
+                                                            <option value="best-selling">Uploaded Date</option>
+                                                            <option value="title-ascending">Rating</option>
+                                                            <option value="title-descending">Relevancy</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col mx-2">
+                                                <div className="card text-dark border-0">
+                                                    <div className="card-body p-0">
+                                                        <select name="" className='form-control border-1  form-select' id="" defaultValue='best-selling'>
+                                                            <option value="manual">Featured</option>
+                                                            <option value="best-selling">Best Selling</option>
+                                                            <option value="title-ascending">Alphabetically, A-Z</option>
+                                                            <option value="title-descending">Alphabetically, Z-A</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="products-list pb-5">
                             <div className="d-flex gap-10 flex-wrap">
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
-                                <ProductCard grid={grid} />
+                                <ProductCard grid={grid} col='col-md-12 col-lg-12'/>
+                                <ProductCard grid={grid} col='col-md-12 col-lg-12'/>
+                                <ProductCard grid={grid} col='col-md-12 col-lg-12'/>
+                                <ProductCard grid={grid} col='col-md-12 col-lg-12'/>
+                                <ProductCard grid={grid} col='col-md-12 col-lg-12'/>
+                                <ProductCard grid={grid} col='col-md-12 col-lg-12'/>
                             </div>
                         </div>
                     </div>

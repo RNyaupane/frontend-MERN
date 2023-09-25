@@ -8,9 +8,9 @@ const Wishlist = () => {
         <>
             <Meta title={'Wishlist'} />
             <BreadCrumb title='Wishlist' />
-            <Container className="wishlist-wrapper home-wrapper-2 py-5">
-                <div className="row">
-                    <div className="col-3">
+            <Container class1="wishlist-wrapper home-wrapper-2 py-5">
+                <div className="row gap-15">
+                    <div className="col-3 bg-white">
                         <div className="wishlist-card position-relative">
                             <img src="images/cross.svg" alt="cross" className="position-absolute cross img-fluid" />
 
@@ -23,7 +23,7 @@ const Wishlist = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-3">
+                    <div className="col-3 bg-white">
                         <div className="wishlist-card position-relative">
                             <img src="images/cross.svg" alt="cross" className="position-absolute cross img-fluid" />
 

@@ -170,7 +170,7 @@ const Header = () => {
             <div className="navbar-nav gap-30 ms-auto text-center d-flex align-items-center mt-4 mt-lg-0 ps-5 py-3"> {/* Wrap only the Login link in a separate div */}
               <Link to='/login' className='d-flex d-none d-lg-flex align-items-center gap-10 text-white'>
                 <img src="/images/user.svg" className='' alt="user" />
-                <p className='mb-0 fs-5 pe-3'>Login </p>
+                <p className='mb-0 fs-6 pe-3'>Login </p>
               </Link>
               <NavLink to='/login' className="nav-link d-lg-none text-white bg-dark py-2" style={{ borderRadius: "25px", width: '100px' }}>Login</NavLink>
             </div>

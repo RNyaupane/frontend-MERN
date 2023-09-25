@@ -12,10 +12,11 @@ import view from '../images/view.svg'
 
 const ProductCard = (props) => {
     let location = useLocation();
-    const { grid } = props;
+    const { grid, col } = props;
     return (
         <>
-            <div className={location.pathname === '/product' ? `gr-${grid}` : 'col-11 col-md-6 col-lg-3 ms-4 mx-md-0 mb-3'}>
+            <div className={location.pathname === '/product' ? `gr-${grid}` : `col-11 ${col!==null?`${col}`:'col-md-6 col-lg-3'} ms-4 mx-md-0 mb-3`}>
+            {/* <div className={location.pathname === '/product' ? `gr-${grid}` : 'col-11 col-md-12 col-lg-12 ms-4 mx-md-0 mb-3'}> */}
                 <Link to='/product/:id' className="product-card position-relative">
                     <div className="wishlist-icon position-absolute">
                         <button className='border-0 bg-transparent'>
@@ -23,7 +24,7 @@ const ProductCard = (props) => {
                         </button>
                     </div>
                     <div className="product-image d-flex justify-content-center">
-                        <img src={watch} alt="product image" width={250}/>
+                        <img className='product-card-image' src={watch} alt="product image" width={250} />
                     </div>
                     <div className="product-details">
                         <h6 className=" brand">Havels</h6>

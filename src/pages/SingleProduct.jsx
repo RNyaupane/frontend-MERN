@@ -10,6 +10,13 @@ import Zoom from 'react-img-zoom'
 import { TbGitCompare } from 'react-icons/tb'
 import { AiOutlineHeart } from 'react-icons/ai'
 import Container from '../components/Container';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay, EffectCoverflow, EffectFade } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
+import "swiper/css/effect-fade";
 
 
 const SingleProduct = () => {
@@ -246,13 +253,54 @@ const SingleProduct = () => {
                 <div className="row">
                     <div className="col-12">
                         <h3 className="section-heading">
-                            Our Popular Products
+                            Related Product
                         </h3>
                     </div>
-                </div>
-                <div className="row">
-                    <ProductCard />
-                    <ProductCard />
+                    <Swiper
+                        // effect={'coverflow'}
+                        loop={true}
+                        autoplay={true}
+                        spaceBetween={20}
+                        grabCursor={true}
+                        centeredSlides={true}
+                        // slidesPerView={3}
+
+                        coverflowEffect={{
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 1,
+                            slideShadows: true,
+                        }}
+                        pagination={true}
+                        modules={[EffectCoverflow, Pagination]}
+                        className="mySwiper"
+                        breakpoints={{
+                            350: {
+                                slidesPerView: 2,
+                            },
+                            // when window width is >= 640px
+                            640: {
+                                width: 640,
+                                slidesPerView: 2,
+                            },
+                            // when window width is >= 768px
+                            768: {
+                                width: 768,
+                                slidesPerView: 3,
+                            },
+                        }}
+
+                    >
+                        <SwiperSlide><ProductCard /></SwiperSlide>
+                        <SwiperSlide><ProductCard /></SwiperSlide>
+                        <SwiperSlide><ProductCard /></SwiperSlide>
+                        <SwiperSlide><ProductCard /></SwiperSlide>
+                        <SwiperSlide><ProductCard /></SwiperSlide>
+                        <SwiperSlide><ProductCard /></SwiperSlide>
+                        <SwiperSlide><ProductCard /></SwiperSlide>
+                    </Swiper>
+
                 </div>
             </Container>
         </>

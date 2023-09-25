@@ -46,6 +46,7 @@ a {
     border-color: inherit;
 }
 
+
 .gap-10 {
     gap: 10px;
 }
@@ -856,6 +857,48 @@ a {
 /* Cart Page Ends Here */
 
 
+/* Filter card Our store */
+.filter-card .card-body {
+    width: max-content;
+}
+
+.filter-card::-webkit-scrollbar {
+    width: 2px;
+    /* Set the width of the scrollbar */
+    height: 2px;
+}
+
+/* Style the scrollbar thumb (the part you drag) */
+.filter-card::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+/* Style the scrollbar track when hovered over */
+.filter-card::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    /* Change color on hover */
+}
+
+.swiper-slide {
+    margin-right: 0px;
+}
+
+.swiper-slide .undefined {
+    width: 100%;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -5px;
+}
+
+/* Filter card Our store ends here */
+
 
 
 /* Checkout page starts here */
@@ -912,9 +955,22 @@ footer .input-group-text {
 
 
 /* Meadia Queries */
+@media (max-width: 1032px) {
+    .gr-3{
+        width: 32%;
+    }
+
+}
 @media (max-width: 768px) {
     .auth-card {
         width: 365px;
+    }
+    .product-card .product-details h5 {
+        font-size: 13px;
+    }
+
+    .product-card-image {
+        width: 150px;
     }
 
     .header-upper .header-upper-links img {
@@ -928,7 +984,12 @@ footer .input-group-text {
     .small-banner {
         display: none;
     }
-
+    .gr-4{
+        width: 48%;
+    }
+    .gr-3{
+        width: 48%;
+    }
     .main-banner-content h4 {
         font-size: 14px;
     }
