@@ -122,11 +122,11 @@ const Home = () => {
 
       <Container class1='home-wrapper-2 p-2 p-md-5'>
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 mt-5">
             <div className="d-flex flex-wrap justify-content-between">
               {services?.map((service, index) => (
-                <div className="d-flex align-items-center gap-15 mb-5 col-6 col-sm-6 col-md-6 col-lg-3" key={index}>
-                  <div className='px-1 '>
+                <div className="d-flex align-items-center mb-5 col-6 col-sm-6 col-md-6 col-lg-3" key={index}>
+                  <div className='px-1 d-flex align-items-center gap-15'>
                     <img src={service.image} alt="services" className="img-fluid" />
                     <div className="">
                       <h6>{service.title}</h6>
@@ -392,6 +392,8 @@ const Home = () => {
           </div>
         </div>
         <div className="row ">
+          <SpecialProduct />
+          <SpecialProduct />
           <SpecialProduct />
           <SpecialProduct />
           <SpecialProduct />

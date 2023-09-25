@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 const SpecialProduct = () => {
     return (
         <>
-            <div className="col-lg-6 mb-3">
+            <div className="col-md-6 col-xl-4 mb-3">
                 <div className="special-product-card">
                     <div className="d-flex special-product-cards">
-                        <div className="">
+                        <div className="w-50">
                             <img src="images/watch.jpg" className='img-fluid' alt="watch" />
                         </div>
                         <div className="special-product-content">
@@ -27,7 +27,7 @@ const SpecialProduct = () => {
                                 </span> &nbsp;
                                 <strike>$200</strike>
                             </p>
-                            <div className="discount-till d-flex d-none d-sm-block align-items-center gap-10">
+                            <div className="discount-till d-flex d-none d-sm-flex align-items-center gap-10">
                                 <p className='mb-0'>
                                     <b>5</b>&nbsp;
                                     days
@@ -40,9 +40,9 @@ const SpecialProduct = () => {
                             </div>
                             <div className="prod-count my-3">
                                 <p>Products: 5</p>
-                                <div className="progress d-none d-sm-block">
+                                {/* <div className="progress d-none d-sm-block">
                                     <div className="progress-bar" role="progressbar" style={{ width: "25%" }} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
+                                </div> */}
                             </div>
                             <Link className='button'>Add to Cart</Link>
                         </div>

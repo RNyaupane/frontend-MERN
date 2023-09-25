@@ -84,27 +84,21 @@ const Header = () => {
                 <div className="">
                   <Link to='/compare-product' className='d-flex align-items-center gap-10 text-white'>
                     <img src="/images/compare.svg" alt="compare" />
-                    <p className='mb-0 d-none d-lg-block'>Compare <br /> Products</p>
+                    <p className='mb-0 d-none d-lg-block fs-14'>Compare <br /> Products</p>
                   </Link>
                 </div>
                 <div className="">
                   <Link to='/wishlist' className='d-flex align-items-center gap-10 text-white'>
                     <img src="/images/wishlist.svg" alt="wishlist" />
-                    <p className='mb-0 d-none d-lg-block'>Favourite <br /> Wishlist</p>
+                    <p className='mb-0 d-none d-lg-block  fs-14'>Favourite <br /> Wishlist</p>
                   </Link>
                 </div>
-                {/* <div className="">
-                  <Link to='/login' className='d-flex align-items-center gap-10 text-white'>
-                    <img src="/images/user.svg" alt="user" />
-                    <p className='mb-0 d-none d-lg-block'>Login <br /> My Account</p>
-                  </Link>
-                </div> */}
                 <div className="">
                   <Link to='/cart' className='d-flex align-items-center gap-10 text-white'>
                     <img src="/images/cart.svg" alt="cart" />
                     <div className="d-flex flex-column gap-10">
-                      <span className='badge bg-white text-dark d-none d-lg-block'>0</span>
-                      <p className='mb-0 d-none d-lg-block'>$ 500</p>
+                      <span className='badge bg-white text-dark d-none px-0 d-lg-block'>0</span>
+                      <p className='mb-0 d-none d-lg-block fs-14'>$ 500</p>
                     </div>
                   </Link>
                 </div>
@@ -113,37 +107,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-      {/* <header className="header-bottom py-3">
-        <div className="container-xxl">
-          <div className="row">
-            <div className="col-12">
-              <div className="menu-buttom d-flex align-items-center gap-30">
-                <div className="">
-                  <div className="dropdown">
-                    <button className="btn btn-secondary dropdown-toggle bg-transparent border-0  gap-15 d-flex align-items-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                      <img src='/images/menu.svg' alt='menu' />
-                      <span className='me-0 me-md-5 d-inline-block'><span className='d-none d-md-block'>Shop </span> Categories</span>
-                    </button>
-                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                      <li><Link className="dropdown-item text-white" to="">Category 1</Link></li>
-                      <li><Link className="dropdown-item text-white" to="">Category 2</Link></li>
-                      <li><Link className="dropdown-item text-white" to="">Category 3</Link></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="menu-links">
-                  <div className="d-flex align-items-center gap-30">
-                    <NavLink to='/'>Home</NavLink>
-                    <NavLink to='/product'>Our Store</NavLink>
-                    <NavLink to='/blogs'>Blogs</NavLink>
-                    <NavLink to='/contact'>Contact</NavLink>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header> */}
       <nav className="navbar navbar-expand-lg navbar-dark header-bottom">
         <div className="container-fluid mx-4">
           <div className="dropdown">

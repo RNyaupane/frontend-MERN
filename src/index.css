@@ -46,7 +46,9 @@ a {
     border-color: inherit;
 }
 
-
+.gap-5{
+    gap: 5px;
+}
 .gap-10 {
     gap: 10px;
 }
@@ -62,7 +64,9 @@ a {
 .fs-11 {
     font-size: 11px;
 }
-
+.fs-14 {
+    font-size: 14px;
+}
 .fs-18 {
     font-size: 18px;
 }
@@ -955,6 +959,13 @@ footer .input-group-text {
 
 
 /* Meadia Queries */
+@media (min-width: 1500px) {
+    .container-xxl{
+        /* max-width: ; */
+    }
+
+}
+
 @media (max-width: 1032px) {
     .gr-3{
         width: 32%;

@@ -69,7 +69,7 @@ const Login = () => {
                                     onCh={formik.handleChange('password')}
                                     onBl={formik.handleChange('password')}
                                 />
-                                <div className="mt-1">
+                                <div className="my-2 ms-auto">
                                     <Link to='/forgot-password'>Forgot Password?</Link>
                                 </div>
                                 <div className="d-flex mt-4 justify-content-center gap-15 align-items-center">
