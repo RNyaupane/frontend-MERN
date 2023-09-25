@@ -1,11 +1,13 @@
 import React from 'react'
 import BreadCrumb from '../components/BreadCrumb'
 import Meta from '../components/Meta';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 import Container from '../components/Container';
 import CustomInput from '../components/CustomInput';
 import { useFormik } from 'formik';
 import * as Yup from 'yup'; //For Form Validation
+import { loginUser } from '../features/user/UserSlice';
 
 const loginSchema = Yup.object({
     email: Yup.string().email('Invalid Email').required('Email is required'),
@@ -13,6 +15,8 @@ const loginSchema = Yup.object({
 });
 
 const Login = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -20,7 +24,8 @@ const Login = () => {
         },
         validationSchema: loginSchema,
         onSubmit: values => {
-            // alert(JSON.stringify(values, null, 2));
+            dispatch(loginUser(values))
+            formik.resetForm();
         },
     });
     return (

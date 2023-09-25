@@ -1,11 +1,14 @@
 import React from 'react'
 import BreadCrumb from '../components/BreadCrumb'
 import Meta from '../components/Meta';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 import Container from '../components/Container';
 import CustomInput from '../components/CustomInput';
 import { useFormik } from 'formik';
 import * as Yup from 'yup'; //For Form Validation
+import { registerUser } from '../features/user/UserSlice';
+
 
 const signUpSchema = Yup.object({
     firstname: Yup.string().required('Firstname is required'),
@@ -16,6 +19,8 @@ const signUpSchema = Yup.object({
 });
 
 const SignUp = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const formik = useFormik({
         initialValues: {
@@ -25,9 +30,12 @@ const SignUp = () => {
             mobile: '',
             password: '',
         },
-        validationSchema:signUpSchema,
+        validationSchema: signUpSchema,
         onSubmit: values => {
-            // alert(JSON.stringify(values, null, 2));
+            dispatch(registerUser(values))
+            // setTimeout(function () {
+            //     window.location.href = '/login';
+            // }, 2000);
         },
     });
     return (
@@ -85,7 +93,7 @@ const SignUp = () => {
                                     val={formik.values.email}
                                     onCh={formik.handleChange('email')}
                                     onBl={formik.handleChange('email')}
-email
+                                    email
                                 />
                                 <div className="error">
                                     {formik.touched.mobile && formik.errors.mobile ? (
