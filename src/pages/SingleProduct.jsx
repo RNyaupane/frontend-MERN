@@ -36,7 +36,7 @@ const SingleProduct = () => {
             <BreadCrumb title='Dynamic Product Name' />
             <Container class1="main-products-wrapper py-5 home-wrapper-2">
                 <div className="row bg-white">
-                    <div className="col-6">
+                    <div className="col-lg-6">
                         <div className="main-product-image">
                             <div className="">
                                 {/* <ReactImageZoom {...props} /> */}
@@ -80,7 +80,7 @@ const SingleProduct = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-6">
+                    <div className="col-lg-6">
                         <div className="main-product-details">
                             <div className="border-bottom">
                                 <h3 className='title'>Kids Watch Bulk 10 Pack Multi Colored</h3>
@@ -134,13 +134,13 @@ const SingleProduct = () => {
                                     <Color />
                                 </div>
                                 <div className="d-flex align-items-center gap-15 flex-row my-3 ">
-                                    <h3 className='product-heading pt-1'>Quantity :</h3>
+                                    <h3 className='product-heading pt-1'>Quantity&nbsp;:</h3>
                                     <div className="">
                                         <input className='px-2 py-1 border border-1' type="number" value={0} min={1} max={10} style={{ width: '60px' }} />
                                     </div>
-                                    <div className="d-flex align-items-center gap-30 ms-5">
-                                        <button className='button border-0' type='submit'>Add to Cart</button>
-                                        <button className='button signup'>Buy It Now</button>
+                                    <div className="d-flex align-items-center gap-30 ms-3">
+                                        <button className='button border-0' type='submit'>Add&nbsp;to&nbsp;Cart</button>
+                                        <button className='button signup'>Buy&nbsp;It&nbsp;Now</button>
                                     </div>
                                 </div>
                                 <div className="d-flex align-items-center gap-15">
@@ -186,8 +186,8 @@ const SingleProduct = () => {
                 <div className="row">
                     <div className="col-12">
                         <h3 id='review'>Reviews</h3>
-                        <div className="review-inner-wrapper">
-                            <div className="review-head d-flex justify-content-between align-items-end">
+                        <div className="review-inner-wrapper p-3 p-sm-5">
+                            <div className="review-head d-flex justify-content-between p-0">
                                 <div className="">
                                     <h4 className='mb-2' >Customer Reviews</h4>
                                     <div className="d-flex align-items-center gap-10">
@@ -198,7 +198,7 @@ const SingleProduct = () => {
                                             edit={false}
                                             activeColor='#ffd700'
                                         />
-                                        <p className='mb-0'>Based on 2 Reviews</p>
+                                        <p className='mb-0'>(32)</p>
                                     </div>
                                 </div>
                                 {
