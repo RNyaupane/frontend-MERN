@@ -18,6 +18,7 @@ const OurStore = () => {
     const navigate = useNavigate();
     const productState = useSelector((state) => state.product.products)
 
+    console.log(productState);
     useEffect(() => {
         getProducts();
     }, [])
@@ -260,11 +261,6 @@ const OurStore = () => {
 
                         <div className="products-list pb-5">
                             <div className="d-flex gap-10 flex-wrap">
-                                <ProductCard grid={grid} col='col-md-12 col-lg-12'/>
-                                <ProductCard grid={grid} col='col-md-12 col-lg-12'/>
-                                <ProductCard grid={grid} col='col-md-12 col-lg-12'/>
-                                <ProductCard grid={grid} col='col-md-12 col-lg-12'/>
-                                <ProductCard grid={grid} col='col-md-12 col-lg-12'/>
                                 <ProductCard grid={grid} col='col-md-12 col-lg-12'/>
                             </div>
                         </div>
