@@ -17,6 +17,7 @@ const loginSchema = Yup.object({
 const Login = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    console.log("hello");
     const formik = useFormik({
         initialValues: {
             email: '',
