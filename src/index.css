@@ -75,6 +75,9 @@ a {
     color: red;
     font-size: 12px;
 }
+.object-fit-cover {
+    object-fit: cover;
+}
 
 .button {
     background-color: var(--color-232f3e);

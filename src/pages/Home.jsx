@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Marquee from "react-fast-marquee";
 import { Link } from 'react-router-dom'
 import BlogCard from '../components/BlogCard';
@@ -15,9 +15,15 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import "swiper/css/effect-fade";
+import { getUserProductWishlist } from '../features/user/UserSlice';
+import { useDispatch } from 'react-redux';
 
 
 const Home = () => {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getUserProductWishlist());
+  }, [])
 
   return (
     <>
